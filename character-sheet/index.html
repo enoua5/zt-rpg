@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ZT Character Sheet</title>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      function onload() {}
+    </script>
+  </head>
+  <body onload="onload()">
+    <header>controls box</header>
+    <main>
+      <!-- Page 1 -->
+      <h1 id="title">Dasu nai Řiva no Zheilao Teiga character sheet</h1>
+      <div class="box" id="details">
+        <input placeholder="Name"></input> <input placeholder="Player"></input>
+        <input placeholder="Appearance"></input> <input></input>
+        <input placeholder="Personality"></input> <input></input>
+        <input placeholder="Ideals"></input> <input></input>
+        <input placeholder="Background"></input> <input></input>
+      </div>
+
+      <h3 class="half-span">Backstory and Character Details</h3>
+      <h3 class="half-span">Equipment and Notes</h3>
+      
+      <div class="box half-span" style="grid-template-rows: 42em;">
+        <textarea id="deats"></textarea>
+      </div>
+      
+      <div class="box half-span" style="grid-template-columns: 4em 1fr; grid-template-rows: 1em 1fr; border-left:none; grid-row-gap: 1em">
+        <label for="credits">Credits</label><input id="credits">
+        <textarea id="notes" class="half-span"></textarea>
+      </div>
+      <br>
+      <!-- Page 2 -->
+      <div id="stat_box" class="full-span">
+        <div id="hp"><small>hp</small><input type="text"/></div>
+        <div id="max_hp"><small>max hp</small><input type="text"/></div>
+        <div id="armor"><small>armor</small><input type="text"/></div>
+        <div id="rations"><small>rations</small><input type="text"/></div>
+        <div id="hunger"><small>hunger</small> <span style="margin-right:0.9em"></span> <input type="checkbox"> </div>
+        <div id="fatigue"><small>fatigue</small><input type="text"/></div>
+        <div id="speed"><small>speed</small><input type="text"/></div>
+        <div id="size"><small>size</small><input type="text"/></div>
+        <div id="energy"><small>energy</small><input type="text"/></div>
+      </div>
+
+      <div class="box full-span">
+      
+        <h3 style="margin: 0">Attacks</h3>
+        
+        <table>
+          <tr>
+            <th>Attack name</th>
+            <th width="30%">Special</th>
+            <th width="10%">Hit attr</th>
+            <th width="7%">Hit adj</th>
+            <th width="10%">Dmg attr</th>
+            <th width="7%">Dmg adj</th>
+            <th width="5%">Range</th>
+            <th width="5%">Break Chance</th>
+          </tr>
+          <tr class="blank-tr">
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+          </tr>
+          <tr class="blank-tr">
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+          </tr>
+          <tr class="blank-tr">
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+          </tr>
+          <tr class="blank-tr">
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+          </tr>
+          <tr class="blank-tr">
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="box" id="skills">  
+        <h3>Skills</h3>
+        <div id="skill-points" style="grid-column: span 1;">
+          <input id="skill-spent"></input> <big>/</big> <input id="skill-total"></input>
+          <small>Skill points spent</small> <small></small> <small>Total skill points</small>
+        </div>
+        
+        <div id="skill-details">
+          <div>
+            <h4>Abilities</h4>
+            
+            <div class="box" id="abilities" style="border: none">
+              <span></span><small>Score</small><small>Dice</small>
+              <span class="ability_header">Body</span>
+              <span>Resilience</span><input></input><input></input>
+              <span>Strength</span><input></input><input></input>
+              <span>Athletics</span><input></input><input></input>
+              <span>Dexterity</span><input></input><input></input>
+              <span class="ability_header">Mind</span>
+              <span>Will</span><input></input><input></input>
+              <span>Perception</span><input></input><input></input>
+              <span>Logic</span><input></input><input></input>
+              <span>Knowledge</span><input></input><input></input>
+              <span class="ability_header">Presence</span>
+              <span>Spirit</span><input></input><input></input>
+              <span>Performance</span><input></input><input></input>
+              <span>Persuasion</span><input></input><input></input>
+              <span>Insight</span><input></input><input></input>
+              <br/>
+
+            </div>
+          </div>
+          <div>
+            <h3>Feats</h3>
+            <div class="box feats">
+              <div style="border-right: 1px solid grey; margin-right: 0.5em">
+                <small>Cost</small>
+                <textarea id="costs" cols="2" rows="25" style="display:block"></textarea>
+              </div>
+              <div>
+                <small>Name/Desc.</small>
+                <textarea id="feats" style="display:block" cols="45" rows="25"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </body>
+</html>

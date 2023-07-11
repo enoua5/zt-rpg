@@ -1,0 +1,198 @@
+/* General */
+#title
+{
+  grid-column: span 4;
+  font-size: 1.80em;
+  margin: 0
+}
+.half-span
+{
+  grid-column: span 2;
+}
+.full-span
+{
+  grid-column: span 4;
+}
+main
+{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+h1,h2,h3,h4,h5,h6
+{
+  text-align: center;
+}
+small 
+{
+  font-style: italic;
+  color: grey;
+}
+textarea
+{
+  border: none;
+}
+input
+{
+  width: auto;
+  border-width: 0 0 0.125em 0;
+  border-style: solid;
+  
+}
+.box
+{
+  display: grid;
+  border: 0.125em solid black;
+  padding: 0.5em;
+}
+
+/* Details */
+#details
+{
+  grid-column: span 4;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
+  justify-items: stretch;
+  align-items: stretch;
+}
+
+/* Stats */
+#skills
+{
+  grid-column: span 4;
+}
+#stat_box
+{
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "hp maxhp armor" "rations hunger fatigue" "speed size energy";
+}
+#skill-details
+{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+#stat_box > *
+{
+  border: 1px solid black;
+  overflow: hidden;
+  height: 2em;
+  width: 100%;
+  padding-top: 0.5em;
+}
+#stat_box > * > :first-child
+{
+  margin-top: 0.5em;
+  margin-left: 0.5em;
+}
+#hp { grid-area: hp; }
+#max_hp { grid-area: maxhp; }
+#armor { grid-area: armor; }
+#fatigue { grid-area: fatigue; }
+#rations { grid-area: rations; }
+#hunger { grid-area: hunger; }
+#speed { grid-area: speed; }
+#stat_box input[type=text]
+{
+  margin-left: 1em;
+  border: none;
+  display: inline;
+  width: 80%;
+  height: 1.5em;
+}
+input[type=checkbox]
+{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  position: relative;
+  background-color: #f1f1f1;
+  border: 1px solid black;
+  color: #666;
+  top: 0.25em;
+  height: 0.75em;
+  width: 0.75em;
+  border-radius: 50px;
+  margin-left: -0.15em;
+  margin-right: -0.15em;
+  cursor: pointer;     
+  outline: none;
+}
+input[type=checkbox]:checked
+{
+  background-color: black;
+}
+
+#skill-points
+{
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+}
+#abilities
+{
+  grid-template-columns: auto 1fr 1fr;
+  grid-column-gap: 1em;
+  grid-row-gap: 0.5em;
+}
+.ability_header
+{
+  grid-column: span 3;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 0.8em;
+}
+#abilities input
+{
+  width: 100%
+}
+
+/* page 1 */
+.feats
+{
+  grid-template-columns: 4em 1fr;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-left: 1px solid black;
+  margin-left: 1em;
+  padding-left: 1em;
+}
+
+td > input
+{
+  text-align: center;
+  width: 100%;
+}
+td
+{
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+.blank-tr
+{
+  height: 1em;
+}
+
+
+/* Print */
+@media print
+{
+    header
+    {
+        display: none;
+    }
+    footer
+    {
+        display: none;
+    }
+}
+
+::-webkit-resizer {
+  display: none;
+}
