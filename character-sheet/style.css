@@ -81,7 +81,6 @@ input
   border: 1px solid black;
   overflow: hidden;
   height: 2em;
-  width: 100%;
   padding-top: 0.5em;
 }
 #stat_box > * > :first-child
