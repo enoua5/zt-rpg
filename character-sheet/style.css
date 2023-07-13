@@ -101,7 +101,7 @@ input
   margin-left: 1em;
   border: none;
   display: inline;
-  width: 80%;
+  width: 60%;
   height: 1.5em;
 }
 input[type=checkbox]
@@ -183,11 +183,7 @@ td
 /* Print */
 @media print
 {
-    header
-    {
-        display: none;
-    }
-    footer
+    header, footer, .dont-print
     {
         display: none;
     }

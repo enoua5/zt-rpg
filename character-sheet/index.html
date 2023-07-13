@@ -3,21 +3,41 @@
   <head>
     <title>ZT Character Sheet</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="main.js"></script>
     <script>
-      function onload() {}
+      function onload()
+      {
+        loadSaves();
+        loadActive();
+        setInterval(autosave, 30*1000);
+      }
     </script>
   </head>
   <body onload="onload()">
-    <header>controls box</header>
+    <header>
+      <button onclick="location.assign('saves.html')">View Saves</button>
+      <button id="save-btn" onclick="save()">Save</button>
+      <button onclick="saveAs()">Save as</button>
+      <button onclick="deleteSave()">Delete</button>
+      <br>
+      <br>
+      <button onclick="print()">Print/Save as PDF</button>
+      <button onclick="exportSave()">Export</button>
+      <button onclick="importSave()">Import</button>
+      <br>
+      <br>
+      <p id="export-box"></p>
+      <hr>
+    </header>
     <main>
       <!-- Page 1 -->
       <h1 id="title">Dasu nai Řiva no Zheilao Teiga character sheet</h1>
       <div class="box" id="details">
-        <input placeholder="Name"></input> <input placeholder="Player"></input>
-        <input placeholder="Appearance"></input> <input></input>
-        <input placeholder="Personality"></input> <input></input>
-        <input placeholder="Ideals"></input> <input></input>
-        <input placeholder="Background"></input> <input></input>
+        <input placeholder="Name" id="name"></input> <input placeholder="Player" id="player"></input>
+        <input placeholder="Appearance" id="appearance1"></input> <input id="appearance2"></input>
+        <input placeholder="Personality" id="personality1"></input> <input id="personality2"></input>
+        <input placeholder="Ideals" id="ideal1"></input> <input id="ideal2"></input>
+        <input placeholder="Background" id="background1"></input> <input id="background2"></input>
       </div>
 
       <h3 class="half-span">Backstory and Character Details</h3>
@@ -34,15 +54,15 @@
       <br>
       <!-- Page 2 -->
       <div id="stat_box" class="full-span">
-        <div id="hp"><small>hp</small><input type="text"/></div>
-        <div id="max_hp"><small>max hp</small><input type="text"/></div>
-        <div id="armor"><small>armor</small><input type="text"/></div>
-        <div id="rations"><small>rations</small><input type="text"/></div>
-        <div id="hunger"><small>hunger</small> <span style="margin-right:0.9em"></span> <input type="checkbox"> </div>
-        <div id="fatigue"><small>fatigue</small><input type="text"/></div>
-        <div id="speed"><small>speed</small><input type="text"/></div>
-        <div id="size"><small>size</small><input type="text"/></div>
-        <div id="energy"><small>energy</small><input type="text"/></div>
+        <div id="hp-box"><small>hp</small><input type="text" id="hp"/></div>
+        <div id="max_hp-box"><small>max hp</small><input type="text" id="max-hp"/></div>
+        <div id="armor-box"><small>armor</small><input type="text" id="armor"/></div>
+        <div id="rations-box"><small>rations</small><input type="text" id="rations" /></div>
+        <div id="hunger-box"><small>hunger</small> <span style="margin-right:0.9em"></span> <input type="checkbox" id="hunger"> </div>
+        <div id="fatigue-box"><small>fatigue</small><input type="text" id="fatigue" /></div>
+        <div id="speed-box"><small>speed</small><input type="text" id="speed" /></div>
+        <div id="size-box"><small>size</small><input type="text" id="size" /></div>
+        <div id="energy-box"><small>energy</small><input type="text" id="energy" /></div>
       </div>
 
       <div class="box full-span">
@@ -61,54 +81,54 @@
             <th width="5%">Break Chance</th>
           </tr>
           <tr class="blank-tr">
-            <td><input type="text"/></td>
-            <td><input type="text"/></td>
-            <td><input type="text"/></td>
-            <td><input type="text"/></td>
-            <td><input type="text"/></td>
-            <td><input type="text"/></td>
-            <td><input type="text"/></td>
-            <td><input type="text"/></td>
+            <td><input type="text" id="atk-name-1" /></td>
+            <td><input type="text" id="atk-spec-1" /></td>
+            <td><input type="text" id="atk-hit-attr-1" /></td>
+            <td><input type="text" id="atk-hit-adj-1" /></td>
+            <td><input type="text" id="atk-dmg-attr-1" /></td>
+            <td><input type="text" id="atk-dmg-adj-1" /></td>
+            <td><input type="text" id="atk-rng-1" /></td>
+            <td><input type="text" id="atk-brk-1" /></td>
           </tr>
           <tr class="blank-tr">
-            <td><input type="text"/></td>
-            <td><input type="text"/></td>
-            <td><input type="text"/></td>
-            <td><input type="text"/></td>
-            <td><input type="text"/></td>
-            <td><input type="text"/></td>
-            <td><input type="text"/></td>
-            <td><input type="text"/></td>
+            <td><input type="text" id="atk-name-2" /></td>
+            <td><input type="text" id="atk-spec-2" /></td>
+            <td><input type="text" id="atk-hit-attr-2" /></td>
+            <td><input type="text" id="atk-hit-adj-2" /></td>
+            <td><input type="text" id="atk-dmg-attr-2" /></td>
+            <td><input type="text" id="atk-dmg-adj-2" /></td>
+            <td><input type="text" id="atk-rng-2" /></td>
+            <td><input type="text" id="atk-brk-2" /></td>
           </tr>
           <tr class="blank-tr">
-            <td><input type="text"/></td>
-            <td><input type="text"/></td>
-            <td><input type="text"/></td>
-            <td><input type="text"/></td>
-            <td><input type="text"/></td>
-            <td><input type="text"/></td>
-            <td><input type="text"/></td>
-            <td><input type="text"/></td>
+            <td><input type="text" id="atk-name-3" /></td>
+            <td><input type="text" id="atk-spec-3" /></td>
+            <td><input type="text" id="atk-hit-attr-3" /></td>
+            <td><input type="text" id="atk-hit-adj-3" /></td>
+            <td><input type="text" id="atk-dmg-attr-3" /></td>
+            <td><input type="text" id="atk-dmg-adj-3" /></td>
+            <td><input type="text" id="atk-rng-3" /></td>
+            <td><input type="text" id="atk-brk-3" /></td>
           </tr>
           <tr class="blank-tr">
-            <td><input type="text"/></td>
-            <td><input type="text"/></td>
-            <td><input type="text"/></td>
-            <td><input type="text"/></td>
-            <td><input type="text"/></td>
-            <td><input type="text"/></td>
-            <td><input type="text"/></td>
-            <td><input type="text"/></td>
+            <td><input type="text" id="atk-name-4" /></td>
+            <td><input type="text" id="atk-spec-4" /></td>
+            <td><input type="text" id="atk-hit-attr-4" /></td>
+            <td><input type="text" id="atk-hit-adj-4" /></td>
+            <td><input type="text" id="atk-dmg-attr-4" /></td>
+            <td><input type="text" id="atk-dmg-adj-4" /></td>
+            <td><input type="text" id="atk-rng-4" /></td>
+            <td><input type="text" id="atk-brk-4" /></td>
           </tr>
           <tr class="blank-tr">
-            <td><input type="text"/></td>
-            <td><input type="text"/></td>
-            <td><input type="text"/></td>
-            <td><input type="text"/></td>
-            <td><input type="text"/></td>
-            <td><input type="text"/></td>
-            <td><input type="text"/></td>
-            <td><input type="text"/></td>
+            <td><input type="text" id="atk-name-5" /></td>
+            <td><input type="text" id="atk-spec-5" /></td>
+            <td><input type="text" id="atk-hit-attr-5" /></td>
+            <td><input type="text" id="atk-hit-adj-5" /></td>
+            <td><input type="text" id="atk-dmg-attr-5" /></td>
+            <td><input type="text" id="atk-dmg-adj-5" /></td>
+            <td><input type="text" id="atk-rng-5" /></td>
+            <td><input type="text" id="atk-brk-5" /></td>
           </tr>
         </table>
       </div>
@@ -127,20 +147,20 @@
             <div class="box" id="abilities" style="border: none">
               <span></span><small>Score</small><small>Dice</small>
               <span class="ability_header">Body</span>
-              <span>Resilience</span><input></input><input></input>
-              <span>Strength</span><input></input><input></input>
-              <span>Athletics</span><input></input><input></input>
-              <span>Dexterity</span><input></input><input></input>
+              <span>Resilience</span><input id="res-score"></input><input id="res-dice"></input>
+              <span>Strength</span><input id="str-score"></input><input id="str-dice"></input>
+              <span>Athletics</span><input id="ath-score"></input><input id="ath-dice"></input>
+              <span>Dexterity</span><input id="dex-score"></input><input id="dex-dice"></input>
               <span class="ability_header">Mind</span>
-              <span>Will</span><input></input><input></input>
-              <span>Perception</span><input></input><input></input>
-              <span>Logic</span><input></input><input></input>
-              <span>Knowledge</span><input></input><input></input>
+              <span>Will</span><input id="wil-score"></input><input id="wil-dice"></input>
+              <span>Perception</span><input id="prc-score"></input><input id="prc-dice"></input>
+              <span>Logic</span><input id="lgc-score"></input><input id="lgc-dice"></input>
+              <span>Knowledge</span><input id="kno-score"></input><input id="kno-dice"></input>
               <span class="ability_header">Presence</span>
-              <span>Spirit</span><input></input><input></input>
-              <span>Performance</span><input></input><input></input>
-              <span>Persuasion</span><input></input><input></input>
-              <span>Insight</span><input></input><input></input>
+              <span>Spirit</span><input id="spr-score"></input><input id="spr-dice"></input>
+              <span>Performance</span><input id="prf-score"></input><input id="prf-dice"></input>
+              <span>Persuasion</span><input id="prs-score"></input><input id="prs-dice"></input>
+              <span>Insight</span><input id="ins-score"></input><input id="ins-dice"></input>
               <br/>
 
             </div>

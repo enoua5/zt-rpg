@@ -1,0 +1,24 @@
+<head>
+  <script src="main.js"></script>
+  <script>
+    allChars = {};
+    function onload() {
+      loadSaves();
+
+      let list = document.getElementById("char-list");
+      for (let save of Object.keys(allChars)) {
+        let li = document.createElement("li");
+        let a = document.createElement("a");
+        a.innerText = save;
+        a.href = "index.html?id=" + save;
+        li.appendChild(a);
+        list.appendChild(li);
+      }
+    }
+  </script>
+</head>
+<body onload="onload();">
+  <h1>Zheilao Teiga characters</h1>
+  <a href="index.html">New character</a>
+  <ul id="char-list"></ul>
+</body>
