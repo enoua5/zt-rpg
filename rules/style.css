@@ -28,6 +28,10 @@ li
 {
     padding: 0.3em;
 }
+hr
+{
+    border: 1px solid grey;
+}
 p:not(.no-indent)
 {
     text-indent: 2em;
@@ -51,8 +55,27 @@ td
 }
 
 /* Appendix F */
+.minion-list
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+}
 .minion-block
 {
     border: 1px solid black;
     padding: 1em;
+}
+.minion-block>h5
+{
+    margin-block-start: 0;
+}
+.minion-main-stats
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+}
+.minion-stats p
+{
+    text-indent: 0;
 }
