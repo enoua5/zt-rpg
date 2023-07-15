@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vehicles — Dasu nai Řiva no Zheilao Teiga</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html">Back to table of contents</a>
+    </header>
+    <main>
+      <h1>Appendix C — Vehicles</h1>
+      <p>
+        Vehicles are entities which can be Piloted by Characters. This can
+        include typical vehicles such as cars and space-ships, but also includes
+        mounts such as horses, and remote-controlled entities. Vehicles do not
+        get their own turns in combat. To take Actions in combat, their Pilot
+        must allocate their Actions to the Vehicle. That is, a Pilot can use
+        their Movement to move the Vehicle, their Main Action to use the
+        Vehicle's weapons, and likewise for any other actions the Vehicle may
+        have.
+      </p>
+      <p>
+        Vehicles have their own stats that define them, similar to Characters.
+        This includes Maximum Health, Hit Points, Ability Scores, Weapons,
+        Armor, and Feats. There are two classes of Vehicle: Agile and Throttled.
+        Agile Vehicles have a Speed, similar to Characters. Throttled Vehicles
+        tend to be faster, but instead of having a Speed, they have a Max Speed,
+        Acceleration, and Turn Speed.
+      </p>
+      <h2>Damage and Repair</h2>
+      <p>
+        Every vehicle has its own
+        <a href="charcreate.html#max-hp">Max HP</a>
+        and
+        <a href="charcreate.html#hp">HP</a>.
+        <a href="combat.html#attack">Damage</a>
+        works similar to how it does with Characters. If a Vehicle is below zero
+        Hit Points, it is inoperable and cannot be given Actions. Vehicles that
+        are organic, or otherwise self-repairing can regain health on their own
+        via
+        <a href="additional.html#resting">Rest</a>. Vehicles that cannot
+        self-heal require a Character to repair them. Repairing has the same
+        requirements as Resting, but the Character can use a different relevant
+        Ability for making the Heal Check. A Character cannot Rest while
+        repairing, essentially allocating their Rest to the Vehicle as they do
+        with Actions. If a Vehicle's Hit Points drop to the negative of its
+        Maximum Health, it is destroyed and cannot be repaired.
+      </p>
+      <h2>Abilities</h2>
+      <p>
+        For each of the twelve Abilities, a Vehicle can have a Score, an
+        Adjustment, or a Blank. When an Action is allocated to the Vehicle, or
+        when the Vehicle is Targeted, these determine what is rolled for the
+        Check. For an Ability with a Score, the Vehicle uses that Ability Score
+        regardless of the Pilot's own. For an Ability with an Adjustment, the
+        Vehicle uses the Pilot's Score, but adds an Adjustment to the Check. For
+        an Ability with a Blank, the Vehicle will automatically fail any Checks
+        that require it.
+      </p>
+      <h2>Movement</h2>
+      <h3>Agile Vehicles</h3>
+      <p>
+        Agile Vehicles are those that are relatively low-speed and
+        high-maneuverability. They have a Speed stat like a Character would
+        have, though typically much faster. They can be allocated their Pilot's
+        Movement, and can move exactly as a Character can.
+      </p>
+      <h3>Throttled Vehicles</h3>
+      <p>
+        Throttled Vehicles move significantly faster, and as such, cannot stop
+        or turn anywhere near as rapidly as the Agile Vehicles. Instead of
+        having a Speed, Throttled Vehicles have a Max Speed, Acceleration, and
+        Turn Speed. When in combat, they also have a Current Speed, and will be
+        pointed in one of the eight grid directions.
+      </p>
+      <p>
+        The eight grid directions consist of the four cardinal grid directions
+        and the diagonals between them. Each of these eight directions is called
+        an Angle, and when you turn, you must turn to one of the two Angles that
+        is closest.
+      </p>
+      <p>
+        Any number of times per Round, as part of Movement, the Pilot can turn
+        the Vehicle. The Vehicle can be turned one Angle in either direction.
+        Once a Vehicle has been turned, it must move forward before it can be
+        turned again. Vehicle will have a Turn Speed of between 0 and 4, which
+        determines the number of Angles away from where it started the Round it
+        can be turned to at any point.
+      </p>
+      <p>
+        Once per turn, as part of a Movement, the Pilot can Accelerate or
+        Decelerate. In doing so, they can add or subtract up to the Vehicle's
+        Acceleration to the Current Speed. The Vehicle can only move directly
+        forward in the direction it's facing, and must move
+        <em>exactly</em> the distance of its Current Speed. A Throttled Vehicle
+        that is inoperable must always decelerate until it reaches a Current
+        Speed of zero.
+      </p>
+      <h4>Crashing</h4>
+      <p>
+        While an Agile Vehicle can always stop or turn before hitting an
+        obstacle, this may not always be possible for a Throttled Vehicle. An
+        obstacle has a stopping power, the amount of Current Speed it will take
+        from a Vehicle before being pushed out of the way. The Vehicle will be
+        stopped if the stopping power is greater than or equal to its Current
+        Speed. For every 10 Current Speed taken, the obstacle deals 1d8 damage
+        to both the Vehicle and to itself. So for instance, if a brick wall with
+        100 stopping power is hit by a car with a Current Speed of 150, the car
+        will be slowed to 50 Current Speed, and both it and the wall will take
+        10d8 damage.
+      </p>
+      <p>
+        Occupants of the Vehicle are shielded from crashing damage as long as
+        the Vehicle is operable. Any damage dealt beyond that threshold is dealt
+        to the Vehicle and all occupants. For instance, if a car has 15 hp left,
+        and takes 20 damage, the car will now be at -5 hp and all occupants will
+        take 5 damage each.
+      </p>
+      <h4>High-Speed Chases</h4>
+      <p>
+        Often with Throttled Vehicles, the speeds involved would have the
+        Vehicles leaving any reasonably sized battle maps within a round or two.
+        To combat this, High-Speed Chases are treated differently.
+      </p>
+      <p>
+        A High-Speed Chase is initiated when multiple Throttled Vehicles are in
+        Combat, moving at roughly the same Speed and Direction. When this
+        happens, we can have the battle map follow the chase to keep things
+        contained. During High-Speed Chases, one of the cardinal directions must
+        be chosen by the GM as the forward direction. This is because the
+        forward-backward directions are treated differently from the
+        side-to-side directions.
+      </p>
+      <p>
+        At the start of every Round, a Standard Speed is set equal to the
+        Players' Vehicle's Current Speed. All Vehicles have a Relative Speed,
+        equal to their Current Speed minus the Standard Speed. Vehicles with a
+        positive Relative Speed cannot move to any space behind them on any
+        step, and Vehicles with a negative Relative Speed cannot move to any
+        space ahead of them on any step.
+      </p>
+      <p>
+        As with how Current Speed usually works, all Vehicles must move exactly
+        a number of spaces forward or backward equal to their Relative Speed.
+        However, during High-Speed Chases, Vehicles cannot change their Angle
+        away from the forward Angle. Instead, they can move one space left or
+        right. This sideways movement can be used a number of times equal to
+        twice their Turn Speed.
+      </p>
+    </main>
+  </body>
+</html>

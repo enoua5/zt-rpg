@@ -1,0 +1,58 @@
+/* General */
+html
+{
+    background-color: rgb(45, 71, 44);
+}
+body
+{
+    background-color: rgb(187, 230, 198);
+    color: rgb(0, 0, 0);
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 2em;
+}
+h2:not(:first-of-type)
+{
+    margin-top: 5em;
+}
+h4
+{
+    text-decoration: underline;
+}
+h5
+{
+    font-size: 0.95em;
+    font-style: italic;
+}
+li
+{
+    padding: 0.3em;
+}
+p:not(.no-indent)
+{
+    text-indent: 2em;
+}
+
+table
+{
+    border-spacing: 0;
+}
+td
+{
+    border: 1px solid black;
+    padding: 0.5em;
+}
+
+
+/* Smaller general things */
+.warn
+{
+    background-color: #ff7;
+}
+
+/* Appendix F */
+.minion-block
+{
+    border: 1px solid black;
+    padding: 1em;
+}
