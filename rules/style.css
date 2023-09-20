@@ -58,7 +58,7 @@ td
 .minion-list
 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
 }
 .minion-block
 {
