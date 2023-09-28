@@ -79,3 +79,7 @@ td
 {
     text-indent: 0;
 }
+.minion-block ul:not(:last-of-type)
+{
+    list-style: none;
+}
