@@ -16,30 +16,38 @@
         Fights are a frequent occurrence for the average hero. Most fights
         aren't sneak attacks, however; there's usually moments of tension,
         verbal exchanges, and posturing before an actual fight. The GM should
-        allow the players to role-play these moments before Initiative is ever
-        rolled.
+        allow the players to role-play these moments before a Initiate Order is ever established.
       </p>
       <p>
         However, eventually the combat has to start. When any character uses a
         <a href="#major-action">Major Action</a>
-        in the presence of a character hostile to them, that Action is resolved,
-        then all other combatants must make Initiative Checks to determine the
-        order of combat. If more than one character wishes to take the initial
+        in the presence of a character hostile to them, Defense Checks are made, that Action is resolved, then
+        combat enters an Initiate Order.
+        If more than one character wishes to take the initial
         Major Action, they should all make a Contested Check, with the highest
         roller being granted the opportunity.
       </p>
-      <h2>Initiative</h2>
+      <h2>Defense Checks</h2>
       <p>
-        An Initiative Check is an Ability Check using the player's choice of
-        either Athletics or Perception. Initiative Order runs from the character
-        who rolled the highest down to the lowest. The character whose Major
-        Action initiated the fight is automatically placed first in the
-        Initiative Order. However, the initiating Action counts as their Major
-        Action for the first Round. If the Action that initiates the Combat
-        targets a character hostile to them, the targeted character is
-        automatically placed second in Initiative Order. If the targeted
-        character is not hostile to them, the nearest hostile character to the
-        initiator is placed second.
+        Before the initiating Action is resolved, all characters in the Encounter make an
+        an Athletics Check, adding their Armor Adjustment. The result of this Check will serve
+        as their Save against all Attacks for the Round. This check is rerolled at the end of
+        each of the character's Turns. This roll is to be public to all players at the table,
+        and strategizing based on the Checks of opponents is encouraged.
+      </p>
+      <h2>Turn Order</h2>
+      <p>
+        If the Action that initiates the Combat targets a character hostile to initator,
+        the targeted character gets the First Turn. If no hostile was targeted
+        by the Action, the nearest hostile character to the initiator gets the First Turn.
+        If the character taking the First Turn was surprised by the initiating Action,
+        they lose their Major Action for the Round.
+      </p>
+      <p>
+        After this First Turn is taken, play continues to the right. If the First Turn was
+        taken by a GM-controlled Character, all GM-controlled Characters get turns before the player characters.
+        When play passes to the Initator, they may take their turn as though this is a new Round and they haven't
+        used their Major Action.
       </p>
       <p>
         While in initiative, assume that 5 seconds pass with each Round; 12
@@ -50,9 +58,9 @@
         On your turn, you can use three Actions: 1 Major Action, 1 Minor Action,
         and 1 Movement Action. Any number of Free Actions can be made on a Turn.
         Any Action marked with an asterisk (*) can be used in Reaction to
-        another character's Action, using your Action for the next round. For
+        another character's Action, using your Action for the next Turn. For
         example, you can use an Assist/Disrupt Action during another character's
-        Turn, but doing so will make it so that you don't get a Major Action
+        Turn, but doing so will make it so that you don't get a Minor Action
         during your next Turn.
       </p>
       <h3 id="major-action">Major Action</h3>
@@ -60,7 +68,7 @@
       <h4 id="attack">Attack</h4>
       <p>
         Make an attack using a weapon. Improvised weapons (such as a rock, or
-        lead pipe) and Unarmed Strikes count for this purpose). See
+        lead pipe) and Unarmed Strikes count for this purpose. See
         <a href="equipment.html#weapon-list">Weapon List</a>
         for Unarmed Strike and Improvised Weapon stats. Attacks are resolved as
         follows:
@@ -76,28 +84,26 @@
           attack a target further than this doubled range.
         </li>
         <li>
-          The Attacker makes a Check using the weapon's Hit Attribute, adding
-          its Hit Adjustment. If the Check is a Critical Fail, the weapon has a
-          chance of breaking. If this happens, roll 1d100 against the weapon's
-          Break Chance. If you roll higher than the chance, nothing happens. If
-          you roll lower than or equal to the Break Chance, the weapon breaks,
-          and must be repaired before being used again. If your weapon breaks,
-          the Attack hits regardless of the Target's Save, and gains an
-          Adjustment of +5 to Damage.
+          <p class="no-indent">
+            The Attacker makes a Check using the weapon's Hit Attribute, adding
+            its Hit Adjustment. If using a ranged attack within the Target's Melee Range,
+            this check gets a -3 Adjustment.
+          </p>
+          <p class="no-indent">
+            If the Check is a Critical Fail, the weapon has a
+            chance of breaking. If this happens, roll 1d100 against the weapon's
+            Break Chance. If you roll higher than the chance, nothing happens. If
+            you roll lower than or equal to the Break Chance, the weapon breaks,
+            and must be repaired before being used again. If your weapon breaks,
+            the Attack hits regardless of the Target's Save, and gains an
+            Adjustment of +5 to Damage.
+          </p>
         </li>
         <li>
-          The Target makes an Athletics Save, adding their Armor Adjustment. If
-          the Attacker is using a Ranged attack within the Target's Melee Range,
-          roll the Save with an Adjustment of +3.
-        </li>
-        <li>
-          If the Target's Save is equal to or greater than the Attacker's Check,
-          the Attack fails: exit this process. Otherwise, continue to step five.
-        </li>
-        <li>
-          The Attacker now rolls Damage. Make a check using the weapon's Damage
-          Attribute, adding its Damage Adjustment. Deduct the Damage from the
-          target's HP.
+          If the Target's current Defense Check is equal to or greater than the Attacker's Check,
+          the Attack fails and damage is not rolled. Otherwise, the Attacker now rolls Damage.
+          Make a check using the weapon's Damage Attribute, adding its Damage Adjustment.
+          Deduct the Damage from the target's HP.
         </li>
       </ol>
       <h4>Grapple</h4>
@@ -114,11 +120,6 @@
         putting the Grappler in a Strength or Dexterity Contest, which could
         count as the failed Save that ends the Grapple.
       </p>
-      <h4>Assist/Disrupt*</h4>
-      <p>
-        As a Reaction to another combatant making a check, impose either +3 or
-        -3 Adjustment on the Check.
-      </p>
       <h4>Dash</h4>
       <p>Take an extra Movement Action.</p>
       <h4 id="disengage">Disengage</h4>
@@ -132,15 +133,6 @@
       <p>
         Many <a href="feats.html">Feats</a>
         provide new Major Actions to choose from.
-      </p>
-      <h4>Delay</h4>
-      <p>
-        You can take your turn after your slot in the Initiative if you'd like.
-        Choose a trigger such as "when an ally gets attacked" or "after the
-        dragon's turn", or whatever you'd like. When that trigger occurs, you
-        may immediately use any Actions you have remaining from this turn. If
-        your next Turn starts before the trigger occurs, you may finish this
-        Turn before immediately starting your next Turn.
       </p>
       <h4>Improvised Major Action</h4>
       <p>
@@ -172,6 +164,11 @@
         Make a Perception, Knowledge, or Spirit Check to gather information that
         isn't readily apparent.
       </p>
+      <h4 id="assist-disrupt">Assist/Disrupt*</h4>
+      <p>
+        As a Reaction to another combatant making a check, impose either +3 or
+        -3 Adjustment on the Check.
+      </p>
       <h4>Minor Action from a Feat</h4>
       <p>
         Many <a href="feats.html">Feats</a>
@@ -192,7 +189,7 @@
       <p>
         Move a number of meters up to your Speed. On a standard battle grid, one
         square is one meter. Given a 2 meter running start, you may jump up to a
-        distance equal to 2 + (your Athletics score / 2). Without a head start,
+        distance equal to 2 + (your Athletics score / 2) meters. Without a head start,
         you may jump half this distance. The distance traveled while jumping
         still counts towards your distance moved in the turn.
       </p>
